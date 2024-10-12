@@ -1,0 +1,21 @@
+server:
+  tomcat:
+    basedir: .data/tomcat
+    accesslog:
+      enabled: true
+      directory: logs
+      suffix: .log
+      prefix: access_log
+      pattern: "%h %l %u %t \"%r\" %s %b %D \"%{Referer}i\" \"%{User-Agent}i\""
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/campus?serverTimezone=Asia/Seoul
+    username: myuser
+    password: mypassword
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true

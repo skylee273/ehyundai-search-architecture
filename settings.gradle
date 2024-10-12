@@ -1,0 +1,15 @@
+rootProject.name = 'ehyundai-search-architecture'
+
+include 'api'
+include 'common'
+include 'domain'
+
+include 'adapter'
+include 'adapter:chat-gpt-client'
+
+include 'usecase'
+include 'usecase:core'
+include 'usecase:inspected-query-usecase'
+include 'adapter:mysql'
+findProject(':adapter:mysql')?.name = 'mysql'
+

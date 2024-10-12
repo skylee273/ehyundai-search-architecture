@@ -1,0 +1,5 @@
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-webflux:3.2.0'
+    // Reactor Netty: WebClient의 커넥터 설정에 필요한 의존성
+    implementation 'io.projectreactor.netty:reactor-netty-http'
+}
